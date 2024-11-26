@@ -1,18 +1,18 @@
-# Puzzle del Río
+# 🧩 Puzzle del Río
 
-## Objetivo del Juego
+## 🎯 Objetivo del Juego
 
 El jugador debe ayudar a un granjero a transportar un lobo, una oveja y una lechuga desde la orilla izquierda de un río hasta la orilla derecha. El granjero tiene un bote que solo puede llevar a él y a un elemento adicional en cada viaje.
 
-## Reglas del Juego
+## 📜 Reglas del Juego
 
-1. El granjero debe estar presente en cada travesía del bote
-2. Solo se puede transportar un elemento a la vez (lobo, oveja o lechuga)
-3. No se puede dejar solos:
-   - Al lobo con la oveja (el lobo se comería a la oveja)
-   - A la oveja con la lechuga (la oveja se comería la lechuga)
+1. 👨‍🌾 El granjero debe estar presente en cada travesía del bote
+2. 🛶 Solo se puede transportar un elemento a la vez (lobo, oveja o lechuga)
+3. 🚫 No se puede dejar solos:
+   - 🐺 al lobo con 🐑 la oveja (el lobo se comería a la oveja)
+   - 🐑 a la oveja con 🥬 la lechuga (la oveja se comería la lechuga)
 
-## Estado del Juego
+## 📝 Estado del Juego
 
 El juego mantiene control de:
 
@@ -21,34 +21,35 @@ El juego mantiene control de:
 - Estados futuros (para rehacer)
 - Estado de victoria/derrota
 
-## Acciones Disponibles
+## 🎮 Acciones Disponibles
 
 - `mover(personaje)`: Mueve un personaje junto con el granjero al otro lado
 - `deshacer()`: Regresa al movimiento anterior
 - `rehacer()`: Rehace un movimiento deshecho
 - `reiniciar()`: Vuelve al estado inicial del juego
 
-## Condiciones de Victoria/Derrota
+## 🏆 Condiciones de Victoria/Derrota
 
-- **Victoria**: Todos los elementos llegan a la orilla derecha
-- **Derrota**:
+- **Victoria** 🥳:
+  - Todos los elementos llegan a la orilla derecha
+- **Derrota** 😱:
   - El lobo queda solo con la oveja
   - La oveja queda sola con la lechuga
 
-## Validación de Movimientos
+## ✅ Validación de Movimientos
 
 - Solo se pueden mover elementos que estén en la misma orilla que el granjero
 - No se permiten movimientos que resulten en situaciones de derrota
 
-## Implementación Técnica
+## 💻 Implementación Técnica
 
 El juego utiliza:
 
-- Zustand para el manejo del estado
-- TypeScript para tipo seguro
-- Zod para validación de esquemas
+- 🐻 **Zustand** para el manejo del estado
+- 📘 **TypeScript** para tipo seguro
+- 🛡️ **Zod** para validación de esquemas
 
-## Instalación
+## 🚀 Instalación
 
 ```bash
 npm install
@@ -57,7 +58,7 @@ npm install
 bun install
 ```
 
-## Uso en Desarrollo
+## 👩‍💻 Uso en Desarrollo
 
 ```bash
 npm run dev
