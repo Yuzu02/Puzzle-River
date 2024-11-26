@@ -1,4 +1,11 @@
 {
-  "cSpell.words": ["geist", "posicion", "Scetion"],
+  "cSpell.words": [
+    "geist",
+    "posicion",
+    "razon",
+    "Resetea",
+    "Scetion",
+    "subcomponentes"
+  ],
   "conventionalCommits.scopes": ["Game"]
 }

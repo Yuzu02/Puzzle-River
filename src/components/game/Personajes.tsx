@@ -1,6 +1,7 @@
 import { Personaje } from "@/types/gameStateSchema";
 import { GiFarmer, GiWolfHead, GiSheep, GiCarrot } from "react-icons/gi";
 
+// Lista de personajes del juego con sus íconos y nombres.
 export const Personajes: {
   id: Personaje;
   icon: React.ReactNode;

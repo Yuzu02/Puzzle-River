@@ -10,6 +10,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { FaQuestionCircle, FaExclamationCircle } from "react-icons/fa";
 
+// Componente que muestra un diálogo modal con las reglas del juego.
 export function GameRulesDialog() {
   return (
     <Dialog>

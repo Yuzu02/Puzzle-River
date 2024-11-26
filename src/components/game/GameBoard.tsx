@@ -9,6 +9,7 @@ import { BankSection, River, LostGame, WinGame } from "@/components/game";
 import { GameRulesDialog } from "@/components/game/GameRulesDialog";
 import { ThemeModeToggle } from "@/components/theme/ThemeModeToggle";
 
+// Componente principal que representa el tablero del juego y coordina los subcomponentes.
 export function GameBoard() {
   const {
     deshacer,

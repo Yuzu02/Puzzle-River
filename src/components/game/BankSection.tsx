@@ -3,6 +3,7 @@ import { Orilla } from "@/types/gameStateSchema";
 import { cn } from "@/lib/utils";
 import { Personajes } from "./Personajes";
 
+// Componente que representa una orilla del río y muestra los personajes en ese lado.
 export const BankSection = ({ side }: { side: Orilla }) => {
   const { posiciones, haGanado } = useGameStore();
   const move = useGameStore((state) => state.mover);

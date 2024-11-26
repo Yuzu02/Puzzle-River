@@ -2,10 +2,11 @@
 
 import { useGameStore } from "@/hooks/useGameStore";
 import { cn } from "@/lib/utils";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { GiCanoe } from "react-icons/gi";
 
+// Componente que representa el río y maneja la animación del bote moviéndose entre las orillas.
 export const River = () => {
   const posiciones = useGameStore((state) => state.posiciones);
   const isBoatOnRight = posiciones.granjero === "derecha";
@@ -14,22 +15,26 @@ export const River = () => {
     null,
   );
   const [boatFacingRight, setBoatFacingRight] = useState(true);
+  const prevIsBoatOnRightRef = useRef(isBoatOnRight);
 
   useEffect(() => {
-    if (isBoatOnRight) {
-      setMoveDirection("right");
-      setBoatFacingRight(true); // Mira hacia la derecha cuando va hacia la derecha
-    } else {
-      setMoveDirection("left");
-      setBoatFacingRight(false); // Mira hacia la izquierda cuando va hacia la izquierda
+    if (prevIsBoatOnRightRef.current !== isBoatOnRight) {
+      if (!prevIsBoatOnRightRef.current && isBoatOnRight) {
+        // Moving from left to right
+        setMoveDirection("right");
+        setBoatFacingRight(true);
+      } else if (prevIsBoatOnRightRef.current && !isBoatOnRight) {
+        // Moving from right to left
+        setMoveDirection("left");
+        setBoatFacingRight(false);
+      }
+      setIsMoving(true);
+      const timer = setTimeout(() => {
+        setIsMoving(false);
+      }, 1000);
+      prevIsBoatOnRightRef.current = isBoatOnRight;
+      return () => clearTimeout(timer);
     }
-    setIsMoving(true);
-
-    const timer = setTimeout(() => {
-      setIsMoving(false);
-    }, 1000);
-
-    return () => clearTimeout(timer);
   }, [isBoatOnRight]);
 
   return (

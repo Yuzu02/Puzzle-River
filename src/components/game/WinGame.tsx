@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 
+// Componente que muestra un mensaje y animación de felicitación cuando el jugador gana el juego.
 export const WinGame = () => {
   return (
     <motion.div
