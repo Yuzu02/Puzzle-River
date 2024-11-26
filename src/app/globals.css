@@ -2,20 +2,69 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@layer utilities {
+  @keyframes wave {
+    0%,
+    100% {
+      transform: translateY(0) scaleY(1) translateX(-5px);
+    }
+    50% {
+      transform: translateY(10px) scaleY(1.1) translateX(5px);
+    }
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  @keyframes boatCrossing {
+    0% {
+      transform: translateX(0) translateY(-50%);
+    }
+    50% {
+      transform: translateX(50%) translateY(-60%);
+    }
+    100% {
+      transform: translateX(100%) translateY(-50%);
+    }
+  }
+
+  .boat-crossing {
+    animation: boatCrossing 1s ease-in-out;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.floating {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes wave {
+  0%,
+  100% {
+    transform: translateX(-25%) scaleY(1);
+  }
+  50% {
+    transform: translateX(25%) scaleY(0.95);
+  }
 }
