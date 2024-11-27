@@ -1,5 +1,10 @@
 # 🧩 Puzzle del Río
 
+## 🌐 Demo
+
+¡Prueba el juego en vivo!
+[puzzle-river.vercel.app](https://puzzle-river.vercel.app)
+
 ## 🎯 Objetivo del Juego
 
 El jugador debe ayudar a un granjero a transportar un lobo, una oveja y una lechuga desde la orilla izquierda de un río hasta la orilla derecha. El granjero tiene un bote que solo puede llevar a él y a un elemento adicional en cada viaje.
@@ -36,11 +41,6 @@ El juego mantiene control de:
   - El lobo queda solo con la oveja
   - La oveja queda sola con la lechuga
 
-## 🌐 Demo
-
-¡Prueba el juego en vivo!
-[puzzle-river.vercel.app](https://puzzle-river.vercel.app)
-
 ## ✅ Validación de Movimientos
 
 - Solo se pueden mover elementos que estén en la misma orilla que el granjero
@@ -58,7 +58,6 @@ El juego utiliza:
 
 ```bash
 npm install
-
 # o
 bun install
 ```
