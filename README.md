@@ -36,6 +36,11 @@ El juego mantiene control de:
   - El lobo queda solo con la oveja
   - La oveja queda sola con la lechuga
 
+## 🌐 Demo
+
+¡Prueba el juego en vivo!
+[puzzle-river.vercel.app](https://puzzle-river.vercel.app)
+
 ## ✅ Validación de Movimientos
 
 - Solo se pueden mover elementos que estén en la misma orilla que el granjero
