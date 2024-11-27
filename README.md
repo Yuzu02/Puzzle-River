@@ -54,6 +54,18 @@ El juego utiliza:
 - 📘 **TypeScript** para tipo seguro
 - 🛡️ **Zod** para validación de esquemas
 
+## 📥 Descargar el proyecto
+
+Para obtener una copia local del proyecto, sigue estos pasos:
+
+```bash
+# 1. Clona el repositorio
+git clone https://github.com/Yuzu02/Puzzle-River.git
+
+# 2. Navega al directorio del proyecto
+cd Puzzle-River
+```
+
 ## 🚀 Instalación
 
 ```bash
