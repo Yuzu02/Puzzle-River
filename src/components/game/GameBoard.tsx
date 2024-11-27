@@ -7,6 +7,7 @@ import { Card } from "@/components/ui/card";
 import { useGameStore } from "@/hooks/useGameStore";
 import { BankSection, River, LostGame, WinGame } from "@/components/game";
 import { GameRulesDialog } from "@/components/game/GameRulesDialog";
+import { AboutDialog } from "@/components/game/AboutDialog";
 import { ThemeModeToggle } from "@/components/theme/ThemeModeToggle";
 
 // Componente principal que representa el tablero del juego y coordina los subcomponentes.
@@ -75,6 +76,7 @@ export function GameBoard() {
           Reiniciar Juego
         </Button>
         <GameRulesDialog />
+        <AboutDialog />
         <ThemeModeToggle className="bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm border-gray-200 dark:border-gray-700 dark:hover:bg-gray-700/90 hover:bg-gray-100/90 dark:text-gray-100" />
       </motion.div>
 
